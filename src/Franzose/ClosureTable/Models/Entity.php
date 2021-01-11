@@ -725,8 +725,7 @@ class Entity extends Eloquent implements EntityInterface
 
                         $child = new static($child);
                     }
-                    $position = !empty($this->position) ? $this->position : $lastChildPosition;
-                    $this->addChild($child, $position);
+                    $this->addChild($child, $lastChildPosition);
                     $lastChildPosition++;
                 }
             });
